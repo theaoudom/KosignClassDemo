@@ -9,8 +9,42 @@ import androidx.navigation.compose.composable
 import com.module.common.navigation.Screen
 import com.module.features.attendance.presentation.AttendanceScreen
 import com.module.features.attendance.presentation.AttendanceVm
+import com.module.features.splash.presentation.SplashScreen
 
-fun NavGraphBuilder.homeMenu(
+/**
+ * All Screen of Splash Graph
+ */
+fun NavGraphBuilder.splashScreen(
+    navController: NavHostController
+) {
+    composable(
+        route = Screen.SplashScreen.route
+    ){
+        SplashScreen(
+            navController = navController
+        )
+    }
+}
+
+/**
+ * All Screen of Auth Graph
+ */
+fun NavGraphBuilder.onboardingScreen(
+
+) {
+    composable(
+        route = ""
+    ){
+        //TODO : Add onboarding screen composable here
+    }
+}
+
+/** === // === */
+
+/**
+ * All Screen of feature Graph
+ */
+fun NavGraphBuilder.home(
 
 ) {
     composable(
@@ -20,8 +54,8 @@ fun NavGraphBuilder.homeMenu(
     }
 }
 
-fun NavGraphBuilder.attendanceMenu(
-    navController: NavHostController
+fun NavGraphBuilder.attendance(
+
 ) {
     composable(
         route = Screen.AttendanceScreen.route
@@ -37,12 +71,15 @@ fun NavGraphBuilder.attendanceMenu(
     }
 }
 
-fun NavGraphBuilder.attendanceDetailScreen(
-    navController: NavHostController
+/**
+ * All Screen of Feature Admin Graph
+ */
+fun NavGraphBuilder.attendanceAdmin(
+
 ) {
     composable(
-        route = Screen.AttendanceDetailScreen.route
+        route = Screen.HomeScreen.route
     ){
-        //TODO : Add attendance detail screen composable here
+        //TODO : Add home screen composable here
     }
 }

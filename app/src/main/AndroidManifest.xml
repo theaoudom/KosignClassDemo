@@ -16,27 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KosignClassDemo">
         <activity
-            android:name=".ui.activity.InitialActivity"
-            android:exported="false"
-            android:theme="@style/Theme.KosignClassDemo" />
-        <activity
-            android:name=".ui.activity.MainAdminActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".ui.activity.RootActivity"
+            android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.KosignClassDemo">
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.activity.MainActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
     </application>
 
 </manifest>

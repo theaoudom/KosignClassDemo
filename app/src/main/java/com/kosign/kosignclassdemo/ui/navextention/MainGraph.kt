@@ -7,30 +7,62 @@ import com.module.common.navigation.Graph
 import com.module.common.navigation.Screen
 
 /**
- * Home Graph
+ * All Graph related navigation here
  */
-fun NavGraphBuilder.homeGraph(
+
+/**
+ * Splash Graph
+ */
+fun NavGraphBuilder.splashGraph(
     navController: NavHostController
 ){
     navigation(
-        route = Graph.HOME_GRAPH,
-        startDestination = Screen.HomeScreen.route
+        route = Graph.SPLASH_GRAPH,
+        startDestination = Screen.SplashScreen.route
     ){
-        homeMenu()
+        splashScreen(navController)
     }
 }
 
 /**
- * Dashboard Graph
+ * Auth Graph
  */
-fun NavGraphBuilder.attendanceGraph(
+fun NavGraphBuilder.authGraph(
     navController: NavHostController
 ){
     navigation(
-        route = Graph.ATTENDANCE_GRAPH,
+        route = Graph.AUTH_GRAPH,
+        startDestination = Screen.OnBoardingScreen.route
+    ){
+        //  Boarding, Register, login ...
+    }
+}
+
+/**
+ * Feature Graph
+ */
+fun NavGraphBuilder.featureGraph(
+    navController: NavHostController
+){
+    navigation(
+        route = Graph.FEATURE_GRAPH,
         startDestination = Screen.AttendanceScreen.route
     ){
-        attendanceMenu(navController)
-        attendanceDetailScreen(navController)
+        home()
+        attendance()
+    }
+}
+
+/**
+ * Feature Admin Graph
+ */
+fun NavGraphBuilder.adminFeatureGraph(
+    navController: NavHostController
+){
+    navigation(
+        route = Graph.FEATURE_ADMIN_GRAPH,
+        startDestination = Screen.HomeScreen.route
+    ){
+        attendanceAdmin()
     }
 }

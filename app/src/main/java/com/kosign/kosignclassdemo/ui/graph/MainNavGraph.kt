@@ -3,8 +3,10 @@ package com.kosign.kosignclassdemo.ui.graph
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import com.kosign.kosignclassdemo.ui.navextention.attendanceGraph
-import com.kosign.kosignclassdemo.ui.navextention.homeGraph
+import com.kosign.kosignclassdemo.ui.navextention.adminFeatureGraph
+import com.kosign.kosignclassdemo.ui.navextention.authGraph
+import com.kosign.kosignclassdemo.ui.navextention.featureGraph
+import com.kosign.kosignclassdemo.ui.navextention.splashGraph
 import com.module.common.navigation.Graph
 
 @Composable
@@ -14,9 +16,11 @@ fun MainNavGraph(
 
     NavHost(
         navController       = navController,
-        startDestination    = Graph.ATTENDANCE_GRAPH
+        startDestination    = Graph.SPLASH_GRAPH
     ){
-        homeGraph(navController)
-        attendanceGraph(navController)
+        splashGraph(navController)
+        authGraph(navController)
+        featureGraph(navController)
+        adminFeatureGraph(navController)
     }
 }

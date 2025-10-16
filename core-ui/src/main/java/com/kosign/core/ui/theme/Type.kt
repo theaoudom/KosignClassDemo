@@ -1,4 +1,4 @@
-package com.kosign.kosignclassdemo.ui.activity.ui.theme
+package com.kosign.core.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

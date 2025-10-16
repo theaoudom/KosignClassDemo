@@ -33,7 +33,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":resources"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

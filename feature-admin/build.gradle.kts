@@ -42,7 +42,6 @@ dependencies {
     implementation(project(":common"))
     implementation(project(":core"))
     implementation(project(":core-ui"))
-    implementation(project(":resources"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
