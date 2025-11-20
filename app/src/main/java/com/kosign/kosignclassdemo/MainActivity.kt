@@ -24,7 +24,7 @@ import com.kosign.core.ui.theme.KosignClassDemoTheme
 import com.kosign.core.ui.components.connectivity.connectivityState
 import com.kosign.kosignclassdemo.ui.graph.MainNavGraph
 import com.module.common.navigation.Graph
-import com.module.common.networkconnection.ConnectionState
+import com.module.core.networkconnection.ConnectionState
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

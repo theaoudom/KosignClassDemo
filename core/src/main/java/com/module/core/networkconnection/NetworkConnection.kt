@@ -1,4 +1,4 @@
-package com.module.common.networkconnection
+package com.module.core.networkconnection
 
 import android.content.Context
 import android.net.ConnectivityManager

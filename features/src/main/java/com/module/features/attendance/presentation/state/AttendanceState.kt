@@ -7,6 +7,8 @@ import com.module.features.attendance.domain.model.AttendanceResponse
 data class AttendanceState(
     val status      : Status? = null,
     val isLoading   : Boolean = false,
-    val data        : AttendanceResponse? = null,
-    val error       : ResourceUtil? = null
+    val attendance  : AttendanceResponse? = null,
+    val error       : ResourceUtil? = null,
+
+    val searchText  : String = ""
 )

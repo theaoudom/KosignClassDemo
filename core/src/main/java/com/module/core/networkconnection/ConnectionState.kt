@@ -1,4 +1,4 @@
-package com.module.common.networkconnection
+package com.module.core.networkconnection
 
 sealed class ConnectionState {
     data object Available : ConnectionState()

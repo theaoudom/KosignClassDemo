@@ -4,9 +4,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
 import androidx.compose.runtime.produceState
 import androidx.compose.ui.platform.LocalContext
-import com.module.common.networkconnection.ConnectionState
-import com.module.common.networkconnection.currentConnectivityState
-import com.module.common.networkconnection.observeConnectivityAsFlow
+import com.module.core.networkconnection.ConnectionState
+import com.module.core.networkconnection.currentConnectivityState
+import com.module.core.networkconnection.observeConnectivityAsFlow
 
 @Composable
 fun connectivityState(): State<ConnectionState> {

@@ -7,6 +7,6 @@ import retrofit2.http.POST
 
 interface AttendanceAPI {
 
-    @POST("example/getAttendance")
+    @POST("users")
     suspend fun getAttendance() : Response<BaseResponse<AttendanceResponse>>
 }

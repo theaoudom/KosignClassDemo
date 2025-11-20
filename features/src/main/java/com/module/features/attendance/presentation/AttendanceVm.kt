@@ -32,7 +32,7 @@ class AttendanceVm @Inject constructor (
                 is DataState.Success -> {
                     _attendanceState.value = _attendanceState.value.copy(
                         isLoading = false,
-                        data = result.data
+                        attendance = result.data
                     )
                 }
                 is DataState.Error -> {
@@ -53,8 +53,18 @@ class AttendanceVm @Inject constructor (
             is AttendanceEvent.OnGetAttendance -> {
                 onGetAttendance()
             }
-            is AttendanceEvent.OnSearchChange -> {
 
+            is AttendanceEvent.OnSearchChange -> {
+                val search = if (attendanceEvent.search.contains("abc")) "" else attendanceEvent.search
+                _attendanceState.value = _attendanceState.value.copy(
+                    searchText = search
+                )
+            }
+
+            AttendanceEvent.OnDismissDialog -> {
+                _attendanceState.value = _attendanceState.value.copy(
+                    error = null
+                )
             }
         }
     }
